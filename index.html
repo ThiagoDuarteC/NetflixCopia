@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX CLONE</title>
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--owl css-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+
+</head>
+<body>
+
+    <div class="movie-background">
+        <header>
+            <div class="container">
+                <h2 class="logo">NETFLIX</h2>
+                <nav>
+                    <a href="index.html" style="color: #ffffff;">Inicio</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Comentários</a>
+                </nav>
+            </div><!--container-->
+        </header>
+
+        <main>
+            <div class="main-movie">
+                <div class="container">
+                    <h3 class="title">Homem-Aranha: Sem Volta Para Casa</h3>
+                    <p class="description">Peter Parker é desmascarado e não consegue mais separar sua vida normal dos grandes riscos de ser um super-herói. Quando ele pede ajuda ao Doutor Estranho, os riscos se tornam ainda mais perigosos, e o forçam a descobrir o que realmente significa ser o Homem-Aranha.</p><!--description-->
+                    <div class="buttons">
+                        <button class="button-play"><i class="fa-solid fa-play"></i>ASSISTIR AGORA</button>
+                        <button class="button-info"><i class="fa-solid fa-info"></i>MAIS INFORMAÇÕES</button>
+                    </div>
+                </div><!--container-->
+            </div><!--main-movie-->
+        </main>
+    </div><!--movie-background-->
+
+    <div class="carrosel-movies">
+        <div class="owl-carousel owl-theme">
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+            <div class="box-movie"><h4><img src="https://www.themoviedb.org/t/p/original/8AI8rkUmFSTYuaOx1fEFsNe6Eru.jpg"></h4></div>
+        </div>
+    </div>
+
+
+<script src="https://kit.fontawesome.com/53ea34e7b5.js" crossorigin="anonymous"></script>
+<script src="js/owl/jquery.min.js"></script>
+<script src="js/owl/owl.carousel.min.js"></script>
+<script src="js/owl/setup.js"></script>
+<script>
+
+    function animarScroll() {
+        var documentTop = $(document).scrollTop();
+        
+        $('.movie-background').each(function(){
+            var itemTop = $(this).offset().top;
+            if(documentTop > itemTop){
+                $('header').css('background-color','rgba(11, 11, 11, 1)');
+            } else{
+                $('header').css('background-color','rgba(11, 11, 11, 0.1)');
+            }
+        })
+    }
+
+    $(document).scroll(function(){
+        animarScroll();
+    })
+</script>
+</body>
+</html>
